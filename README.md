@@ -12,3 +12,4 @@ https://djncqu43o8.execute-api.us-east-2.amazonaws.com/
 zip function.zip index.js
 aws lambda update-function-code --function-name hello-world-node --zip-file fileb://function.zip
 ```
+<!-- pipeline test Sun Feb 22 06:35:27 UTC 2026 -->
