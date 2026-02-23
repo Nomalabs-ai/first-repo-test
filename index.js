@@ -171,7 +171,14 @@ exports.handler = async (event) => {
     .chip-icon {
       width: 36px;
       height: 36px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .chip-icon svg {
+      width: 36px;
+      height: 36px;
     }
     .chip-label {
       font-size: 0.82rem;
@@ -265,23 +272,56 @@ exports.handler = async (event) => {
 
     <div class="integrations">
       <div class="chip">
-        <img class="chip-icon" src="https://cdn.simpleicons.org/gmail/EA4335" width="36" height="36" alt="Gmail" />
+        <span class="chip-icon">
+          <!-- Gmail – official envelope-M mark, brand red -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Gmail">
+            <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+          </svg>
+        </span>
         <span class="chip-label">Gmail</span>
       </div>
       <div class="chip">
-        <img class="chip-icon" src="https://cdn.simpleicons.org/slack/4A154B" width="36" height="36" alt="Slack" />
+        <span class="chip-icon">
+          <!-- Slack – official 4-color hashtag grid mark -->
+          <svg viewBox="0 0 127 127" xmlns="http://www.w3.org/2000/svg" aria-label="Slack">
+            <path d="M27.2 80c0 7.3-5.9 13.2-13.2 13.2C6.7 93.2.8 87.3.8 80c0-7.3 5.9-13.2 13.2-13.2h13.2V80zm6.6 0c0-7.3 5.9-13.2 13.2-13.2 7.3 0 13.2 5.9 13.2 13.2v33c0 7.3-5.9 13.2-13.2 13.2-7.3 0-13.2-5.9-13.2-13.2V80z" fill="#E01E5A"/>
+            <path d="M47 27c-7.3 0-13.2-5.9-13.2-13.2C33.8 6.5 39.7.6 47 .6c7.3 0 13.2 5.9 13.2 13.2V27H47zm0 6.7c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2H13.9C6.6 60.1.7 54.2.7 46.9c0-7.3 5.9-13.2 13.2-13.2H47z" fill="#36C5F0"/>
+            <path d="M99.9 46.9c0-7.3 5.9-13.2 13.2-13.2 7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2H99.9V46.9zm-6.6 0c0 7.3-5.9 13.2-13.2 13.2-7.3 0-13.2-5.9-13.2-13.2V13.8C66.9 6.5 72.8.6 80.1.6c7.3 0 13.2 5.9 13.2 13.2v33.1z" fill="#2EB67D"/>
+            <path d="M80.1 99.8c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2-7.3 0-13.2-5.9-13.2-13.2V99.8h13.2zm0-6.6c-7.3 0-13.2-5.9-13.2-13.2 0-7.3 5.9-13.2 13.2-13.2h33.1c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2H80.1z" fill="#ECB22E"/>
+          </svg>
+        </span>
         <span class="chip-label">Slack</span>
       </div>
       <div class="chip">
-        <img class="chip-icon" src="https://cdn.simpleicons.org/dropbox/0061FF" width="36" height="36" alt="Dropbox" />
+        <span class="chip-icon">
+          <!-- Dropbox – official open-box mark, brand blue -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Dropbox">
+            <path fill="#0061FF" d="M6 1.807L0 5.629l6 3.822 6.001-3.822L6 1.807zM18 1.807l-6 3.822 6 3.822 6-3.822-6-3.822zM0 13.274l6 3.822 6.001-3.822L6 9.452l-6 3.822zM18 9.452l-6 3.822 6 3.822 6-3.822-6-3.822zM6 18.371l6.001 3.822 6-3.822-6-3.822L6 18.371z"/>
+          </svg>
+        </span>
         <span class="chip-label">Dropbox</span>
       </div>
       <div class="chip">
-        <img class="chip-icon" src="https://cdn.simpleicons.org/apple/FFFFFF" width="36" height="36" alt="Apple Notes" />
+        <span class="chip-icon">
+          <!-- Apple Notes – yellow notepad with ruled lines -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Apple Notes">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4" fill="#FFCC00"/>
+            <rect x="2" y="2" width="20" height="5" rx="4" ry="4" fill="#F5A623"/>
+            <rect x="2" y="5" width="20" height="2" fill="#F5A623"/>
+            <line x1="5.5" y1="11.5" x2="18.5" y2="11.5" stroke="#7A5900" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="5.5" y1="14.5" x2="18.5" y2="14.5" stroke="#7A5900" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="5.5" y1="17.5" x2="14"   y2="17.5" stroke="#7A5900" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </span>
         <span class="chip-label">Apple Notes</span>
       </div>
       <div class="chip">
-        <img class="chip-icon" src="https://cdn.simpleicons.org/todoist/DB4035" width="36" height="36" alt="Todoist" />
+        <span class="chip-icon">
+          <!-- Todoist – official mark, brand red -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Todoist">
+            <path fill="#DB4035" d="M21 0H3C1.35 0 0 1.35 0 3v3.858s3.854 2.24 4.098 2.38c.31.18.694.177 1.004 0 .26-.147 8.02-4.608 8.136-4.675.279-.161.58-.107.748-.01.164.097.606.348.84.48.232.134.221.502.013.622l-9.712 5.59c-.346.2-.69.204-1.048.002C3.478 10.907.998 9.463 0 8.882v2.02l4.098 2.38c.31.18.694.177 1.004 0 .26-.147 8.02-4.609 8.136-4.676.279-.16.58-.106.748-.008.164.096.606.347.84.48.232.133.221.5.013.62-.208.121-9.288 5.346-9.712 5.59-.346.2-.69.205-1.048.002C3.478 14.951.998 13.506 0 12.926v2.02l4.098 2.38c.31.18.694.177 1.004 0 .26-.147 8.02-4.609 8.136-4.676.279-.16.58-.106.748-.009.164.097.606.348.84.48.232.133.221.502.013.622l-9.712 5.59c-.346.199-.69.204-1.048.001C3.478 18.994.998 17.55 0 16.97V21c0 1.65 1.35 3 3 3h18c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+          </svg>
+        </span>
         <span class="chip-label">Todoist</span>
       </div>
     </div>
