@@ -169,8 +169,9 @@ exports.handler = async (event) => {
       background: rgba(255,255,255,0.07);
     }
     .chip-icon {
-      font-size: 2rem;
-      line-height: 1;
+      width: 36px;
+      height: 36px;
+      display: block;
     }
     .chip-label {
       font-size: 0.82rem;
@@ -264,23 +265,23 @@ exports.handler = async (event) => {
 
     <div class="integrations">
       <div class="chip">
-        <span class="chip-icon">📧</span>
+        <img class="chip-icon" src="https://cdn.simpleicons.org/gmail/EA4335" width="36" height="36" alt="Gmail" />
         <span class="chip-label">Gmail</span>
       </div>
       <div class="chip">
-        <span class="chip-icon">💬</span>
+        <img class="chip-icon" src="https://cdn.simpleicons.org/slack/4A154B" width="36" height="36" alt="Slack" />
         <span class="chip-label">Slack</span>
       </div>
       <div class="chip">
-        <span class="chip-icon">📦</span>
+        <img class="chip-icon" src="https://cdn.simpleicons.org/dropbox/0061FF" width="36" height="36" alt="Dropbox" />
         <span class="chip-label">Dropbox</span>
       </div>
       <div class="chip">
-        <span class="chip-icon">🍎</span>
+        <img class="chip-icon" src="https://cdn.simpleicons.org/apple/FFFFFF" width="36" height="36" alt="Apple Notes" />
         <span class="chip-label">Apple Notes</span>
       </div>
       <div class="chip">
-        <span class="chip-icon">✅</span>
+        <img class="chip-icon" src="https://cdn.simpleicons.org/todoist/DB4035" width="36" height="36" alt="Todoist" />
         <span class="chip-label">Todoist</span>
       </div>
     </div>
