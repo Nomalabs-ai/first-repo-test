@@ -34,7 +34,20 @@ jobs:
             --zip-file fileb://function.zip \
             --region us-east-2
 
-      - name: Wait for update to complete
+      - name: Wait for code update to complete
+        run: |
+          aws lambda wait function-updated \
+            --function-name hello-world-node \
+            --region us-east-2
+
+      - name: Pin runtime to nodejs22.x
+        run: |
+          aws lambda update-function-configuration \
+            --function-name hello-world-node \
+            --runtime nodejs22.x \
+            --region us-east-2
+
+      - name: Wait for configuration update to complete
         run: |
           aws lambda wait function-updated \
             --function-name hello-world-node \
